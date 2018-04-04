@@ -1,12 +1,11 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react'
 /* ------------------------- Internal Dependencies -------------------------- */
-import { graphics } from 'assets'
 import { latptop } from 'assets/images'
 import {
-  Flex, Box, 
-  Heading, Image, Paragraph, Link, Span, Container, Section,
-  BackgroundImage, BackgroundGradient
+  Flex, 
+  Paragraph, Section,
+  BackgroundImage
 } from 'atomic'
 /* ------------------------------- Component -------------------------------- */
 export default props =>

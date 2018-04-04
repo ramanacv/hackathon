@@ -1,12 +1,11 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react'
 /* ------------------------- Internal Dependencies -------------------------- */
-import { graphics } from 'assets'
 import { terminalLinux } from 'assets/images'
 import {
   Flex, Box, 
-  Heading, Image, Paragraph, Link, Span, Container, Section, HorizontalRule,
-  BackgroundImage, BackgroundGradient
+  Heading, Paragraph, Container, Section, HorizontalRule,
+  BackgroundImage
 } from 'atomic'
 /* ------------------------------- Component -------------------------------- */
 export default props =>

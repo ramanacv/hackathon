@@ -51,7 +51,6 @@ const theme = {
     blue: ['#051e5e', '#183682'],
     blueSky: ['#36D1DC', '#5B86E5'],
     white: ['#065dad','#2583b0'],
-    blueSky: ['#36D1DC', '#5B86E5'],
     blueAlge: ['#67B26F', '#4ca2cd'],
     charcoal: ['#283048', '#859398'],
     green: ['#7B920A', '#ADD100'],

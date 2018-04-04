@@ -1,5 +1,4 @@
 import React from 'react'
-import { hover } from 'styled-system'
 import { Block } from 'particles'
 
 const Button = props => <Block {...props}/>

@@ -1,6 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Block } from 'particles'
 
 const InputWrapper = styled(Block)`

@@ -3,12 +3,11 @@ import React from 'react'
 import idx from './idx';
 
 /* ------------------------- Internal Dependencies -------------------------- */
-import { Absolute} from 'particles'
 import { 
   Flex, Box, 
-  BackgroundImage, BackgroundGradient,
-  Button, Container, Heading, Image, Link, Paragraph, Section, Span, SVG,
-  Blockquote, HorizontalRule, Shape, Responsive 
+  BackgroundImage,
+  Heading, Link,
+  HorizontalRule
 }from 'atomic'
 
 /* ------------------------------- Component -------------------------------- */

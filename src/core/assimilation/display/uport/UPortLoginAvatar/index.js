@@ -2,12 +2,8 @@
 import idx from './idx'
 import React from 'react';
 import Button from 'atoms/Button'
-import Absolute from 'atoms/Absolute'
-import Container from 'atoms/Container'
-import Box from 'atoms/Box'
 import Flex from 'atoms/Flex'
 import Heading from 'atoms/Heading'
-import List from 'atoms/List'
 import Image from 'atoms/Image'
 /* ---------------------------- Module Package ------------------------------ */
 export default props => props.status

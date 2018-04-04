@@ -1,6 +1,5 @@
 /* ------------------------- External Dependencies -------------------------- */
 import upperFirst from 'lodash/upperFirst'
-import forIn from 'lodash/forIn'
 
 /* --------------------------- Require Context ----------------------------- */
 const req = require.context('.', true, /\.\/.+\/index\.js$/)

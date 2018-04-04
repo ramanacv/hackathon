@@ -10,13 +10,11 @@
  * @var {String} props.foundry - Render Component
  */
 /* ------------------------- External Dependencies -------------------------- */
-import React from 'react'
 import { connect } from 'react-redux'
 import { compose, lifecycle } from 'recompose'
 /* ------------------------- Internal Dependencies -------------------------- */
 import ItemList from 'workshop/core/ItemList'
 import {fromFirestore} from 'store/departments/selectors'
-import {firestoreDocumentComposeGetRequest} from 'store/departments/actions'
 /* ---------------------------- Module Package ------------------------------ */
 /*---*--- Lifecylce Methods ---*---*/
 const queryLifecycle = lifecycle(

@@ -1,8 +1,6 @@
-import actions, {
-  PROVIDER_CHANGE
-} from './actions'
 import { initialState } from './selectors'
-
+import actions from './actions'
+  
 export default (state = initialState, {type, payload, metadata, batch, entity} ) => {
   if(!!(metadata && metadata.delta) && entity === 'ethers') {
     return {

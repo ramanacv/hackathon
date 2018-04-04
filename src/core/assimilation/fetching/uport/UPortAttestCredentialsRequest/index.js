@@ -1,7 +1,6 @@
 /* ------------------------- External Dependencies -------------------------- */
-import React from 'react'
 import { connect } from 'react-redux';
-import { compose, lifecycle, withProps } from 'recompose'
+import { compose, lifecycle } from 'recompose'
 /* ------------------------- Internal Dependencies -------------------------- */
 import { fromUport } from 'assimilation/symbiosis/selectors'
 import { uPortGetAttestCredentialsRequest } from 'assimilation/symbiosis/actions'

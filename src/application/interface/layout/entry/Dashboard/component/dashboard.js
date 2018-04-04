@@ -1,7 +1,6 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react'
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import { asyncComponent } from 'react-async-component';
 /* ------------------------- Internal Dependencies -------------------------- */
 
 import Absolute from 'atoms/Absolute'

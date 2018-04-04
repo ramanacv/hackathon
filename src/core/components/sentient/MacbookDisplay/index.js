@@ -10,7 +10,6 @@ import Render from './render';
 import { } from 'store/departments/actions'
 
 function mapStateToProps(state) {
-  const {  } = state
   return {
     
   };

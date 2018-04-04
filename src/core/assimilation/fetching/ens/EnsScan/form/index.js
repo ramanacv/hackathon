@@ -4,9 +4,7 @@ import { Field } from 'redux-form'
 
 /* ------------------------- Internal Dependencies -------------------------- */
 // files
-import { ethereum } from 'assets/shapes'
 // atoms
-import SVG from 'atoms/SVG'
 import StyleFieldDefault from 'static/style/StyleFieldDefault'
 import Box from 'atoms/Box'
 import Flex from 'atoms/Flex'

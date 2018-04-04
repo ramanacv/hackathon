@@ -1,12 +1,9 @@
 /* ------------------------- External Dependencies -------------------------- */
-import React from 'react'
 import { connect } from 'react-redux';
 import { compose, lifecycle, withProps } from 'recompose'
 /* ------------------------- Internal Dependencies -------------------------- */
-import { ProviderCard } from 'foundry'
 import WalletGeneratedDisplay from 'assimilation/display/ethers/EthersWalletGeneratedDisplay'
 import { fromEthers } from 'assimilation/symbiosis/selectors'
-import { ethersWalletCreateRandomRequest } from 'assimilation/symbiosis/actions'
 
 import ethers from 'assimilation/symbiosis/ethers/actions'
 /* ---------------------------- Module Package ------------------------------ */

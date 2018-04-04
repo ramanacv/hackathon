@@ -1,27 +1,22 @@
 /* ------------------------- External Dependencies -------------------------- */
-import _ from 'lodash'
 import React from 'react';
 import {
   branch,
   compose,
   lifecycle,
-  withProps,
-  withState,
   withStateHandlers,
   renderComponent
 } from 'recompose'
 import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
-import filterKeys from 'filter-keys'
 
 /* ------------------------- Internal Dependencies -------------------------- */
 import { SpinnerSquares } from 'atomic'
-import { createValidator, required } from 'logic/forms/validation'
+import { createValidator } from 'logic/forms/validation'
 
 /*--- Redux Store ---*/
 import { fromEthers } from 'assimilation/symbiosis/selectors'
 import ethers from 'assimilation/symbiosis/ethers/actions'
-import { ethersWalletCreateFromMenemonicRequest } from 'assimilation/symbiosis/actions'
 /* ------------------------ Initialize Dependencies ------------------------- */
 import FormRender from './render'
 

@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 /* ------------------------- Internal Dependencies -------------------------- */
 import assets from 'assets'
-import { Absolute, Box } from 'particles'
-import { BackgroundGradient, Image } from 'atomic'
+import { Box } from 'particles'
+import { Image } from 'atomic'
 
 /* --------------------------- Styled Components ---------------------------- */
 const Wrapper = styled(Box)`

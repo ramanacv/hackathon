@@ -1,24 +1,16 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react'
 /* ------------------------- Internal Dependencies -------------------------- */
-import { logoUport, logo, logoUportSmall } from 'assets/graphics'
 import { uportWhite } from 'assets/svg'
-import { icons, svg } from 'assets'
 import Flex from 'atoms/Flex'
-import Absolute from 'atoms/Absolute'
 import Box from 'atoms/Box'
 import Heading from 'atoms/Heading'
-import Button from 'atoms/Button'
-import Link from 'atoms/Link'
-import Image from 'atoms/Image'
 import SVG from 'atoms/SVG'
 
 import DrawerOpen from 'containers/drawer/DrawerOpen'
-import MenuPeoplePopover from 'smithing/menus/MenuPeoplePopover'
 
 import MenuChatPopover from 'smithing/menus/MenuChatPopover'
 import MenuPredictPopover from 'smithing/menus/MenuPredictPopover'
-import FormSearchGlobal from 'smithing/forms/search/FormSearchGlobal'
 
 /* ------------------------------- Component -------------------------------- */
 export default props =>

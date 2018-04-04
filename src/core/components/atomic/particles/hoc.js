@@ -1,4 +1,3 @@
-import React from 'react'
 import { compose } from 'recompose'
 import styled from 'styled-components'
 import {
@@ -93,7 +92,6 @@ const blurry = responsiveStyle('filter', 'blur')
 const border = [responsiveStyle('border',), responsiveStyle('border', 'b') ]
 const display = [responsiveStyle('display'), responsiveStyle('display', 'dis') ]
 
-const minHight = [responsiveStyle('minHeight'), responsiveStyle('minHeight', 'mh') ]
 const filter = [responsiveStyle('filter'), responsiveStyle('filter', 'fil') ]
 const fontWeight = [responsiveStyle('fontWeight'), responsiveStyle('fontWeight', 'fw')]
 const opacity = [responsiveStyle('opacity', 'opacity'), responsiveStyle('opacity', 'o') ]

@@ -1,6 +1,5 @@
 import upperFirst from 'lodash/upperFirst'
 import forIn from 'lodash/forIn'
-import selectors from 'assimilation/symbiosis/selectors'
 
 const req = require.context('.', true, /\.\/.+\/selectors\.js$/)
 req.keys().forEach((key) => {

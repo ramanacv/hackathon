@@ -1,7 +1,6 @@
 /* ------------------------- External Dependencies -------------------------- */
-import React from 'react'
 import { connect } from 'react-redux';
-import { compose, lifecycle, withProps, withState, renderComponent } from 'recompose'
+import { compose, lifecycle, withProps, withState } from 'recompose'
 /* ------------------------- Internal Dependencies -------------------------- */
 import Render from './render';
 /* ---------------------------- Module Package ------------------------------ */
@@ -23,7 +22,7 @@ const defaultProps = withProps({
 const queryLifecycle = lifecycle({
   /*--- Component Update ---*/
   componentDidUpdate(prevProps) {
-    if(prevProps != this.props) {
+    if(prevProps !== this.props) {
       this.setState({
         openNow: false
       })

@@ -1,5 +1,5 @@
 /* ------------------------- External Dependencies -------------------------- */
-import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
+import { put, takeEvery } from 'redux-saga/effects';
 
 /* ------------------------- Internal Dependencies -------------------------- */
 import uPortConnection from 'logic/services/uPort';
@@ -94,8 +94,8 @@ function* getAddress({payload, metadata}) {
 function* getAttestCredentials({payload, metadata}) {
   try {
     
-    const { credentials, uriHandler } = payload
-    const address = yield uPortConnection.attestCredentials(payload, uriHandler)
+    const { uriHandler } = payload
+    yield uPortConnection.attestCredentials(payload, uriHandler)
     yield put(uPortGetAttestCredentialsSuccess({
       payload: payload.claim, 
       metadata
@@ -118,7 +118,6 @@ function* initContract({payload, metadata}) {
       metadata
     }))
   } catch(e) {
-    e
     yield put(uPortInitContractFailure({payload: e, metadata}))
   }
 }

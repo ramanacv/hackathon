@@ -91,6 +91,7 @@ const queryLifecycle = lifecycle(
           status: 'Failure: Unable to retreive requested data',
         })
         break;
+      default:
     }
   }
   }

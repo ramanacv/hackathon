@@ -1,4 +1,4 @@
-import { abacus, dataAnalytics, management, networkCloud, industrialDesign, flowChartComplex } from 'assets/shapes'
+import { abacus, dataAnalytics, management, networkCloud, flowChartComplex } from 'assets/shapes'
 export default [
   {
     title: 'History',

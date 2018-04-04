@@ -5,14 +5,13 @@ import { dataMining } from 'assets/shapes'
 /*---*--- Atoms ---*---*/
 import {
   Flex, Box, 
-  Heading, Image, Paragraph, Link, Span, Container, SVG, List,
-  BackgroundImage, BackgroundGradient, HorizontalRule,
+  Heading, SVG,
+  HorizontalRule,
   Route
 } from 'atomic'
 
 
 
-import simpleStorage from 'contracts/SimpleStorage.json'
 import contracts from 'contracts'
 
 /*---*--- Assimilation ---*---*/

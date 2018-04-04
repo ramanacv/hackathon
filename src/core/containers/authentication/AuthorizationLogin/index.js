@@ -10,7 +10,6 @@ import Render from './render';
 import { authLoginWithAuthorization } from 'store/departments/actions'
 
 function mapStateToProps(state) {
-  const { data } = state
   return {};
 } 
 

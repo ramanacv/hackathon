@@ -1,16 +1,9 @@
-import React from 'react'
 import {
   bool,
   string,
   number,
   oneOf,
 } from 'prop-types'
-import {
-  space,
-  fontSizes,
-  weights,
-  colors,
-} from './theme'
 import {
   idx,
   px,
@@ -22,16 +15,6 @@ import {
 import DonutBase from './DonutBase'
 
 const bold = props => idx('weights.1', props.theme)
-
-const shadowRendered = props => 
-  props.shadow >= 0
-  ? props.shadowHover
-    ? `box-shadow: ${props.theme.shadows[props.shadow].default}; &:hover {box-shadow:${props.theme.shadows[props.shadow].hover}}; ` 
-    : `box-shadow: ${props.theme.shadows[props.shadow].default};` 
-  : null
-  
-const textAlign = props => props.textAlign ? ({textAlign: props.textAlign}) : null
-
 
 const components = [
   // Block

@@ -1,16 +1,11 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react'
 /* ------------------------- Internal Dependencies -------------------------- */
-import { images, svg } from 'assets'
-import { logoUport, logo, logoUportSmall } from 'assets/graphics'
 import {
-  Absolute, Box, Container, Flex, Fixed,
-  Heading, Image, Paragraph, Link, Span, SVG, Shape,
-  BackgroundImage, BackgroundGradient
+  Box, Container, Flex,
+  Heading, Paragraph,
+  BackgroundGradient
 } from 'atomic'
-
-
-import { FirestoreList, FirestoreDocument, FirestoreTable, FirestoreFeed } from 'containers'
 
 import Mission from 'smithing/sections/FrontMission'
 import Resources from 'smithing/sections/FrontResources'

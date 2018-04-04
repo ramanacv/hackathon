@@ -1,18 +1,13 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react'
 /* ------------------------- Internal Dependencies -------------------------- */
-import { graphics } from 'assets'
-import { flags } from 'assets/images'
 import {
   Flex, Box, 
-  Heading, Image, Paragraph, Link, Span, Container, Section, HorizontalRule,
-  BackgroundImage, BackgroundGradient
+  Heading, Paragraph, Section, HorizontalRule
 } from 'atomic'
 
 import UportCredentialsRequest from 'assimilation/fetching/uport/UPortCredentialsRequest'
 import UPortAttestCredentialsRequest from 'assimilation/fetching/uport/UPortAttestCredentialsRequest'
-import UPortTransactionGeneration from 'assimilation/fetching/uport/UPortTransactionGeneration'
-import UPortAttestForm from 'assimilation/fetching/uport/UPortAttestForm'
 import UPortAttestIdentityForm from 'assimilation/fetching/uport/UPortAttestIdentityForm'
 import UPortAttestAddressForm from 'assimilation/fetching/uport/UPortAttestAddressForm'
 /* ------------------------------- Component -------------------------------- */

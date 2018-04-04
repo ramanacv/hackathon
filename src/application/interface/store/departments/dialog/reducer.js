@@ -1,4 +1,3 @@
-import { reducer } from 'redux-form'
 import { initialState } from './selectors'
 import { DIALOG_OPEN, DIALOG_CLOSE } from './actions'
 

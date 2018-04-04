@@ -16,7 +16,6 @@ import {
 
     THEME_LAYOUT_DASHBOARD_FOOTER_ON,
     THEME_LAYOUT_DASHBOARD_FOOTER_OFF,
-    THEME_LAYOUT_DASHBOARD_FOOTER_TOGGLE,
     THEME_LAYOUT_DASHBOARD_FOOTER_SMALL,
     THEME_LAYOUT_DASHBOARD_FOOTER_NORMAL,
     THEME_LAYOUT_DASHBOARD_FOOTER_LARGE,
@@ -38,18 +37,7 @@ const HEADER_HEIGHT_SMALL = [0, 50]
 const HEADER_HEIGHT_NORMAL = [180, 80]
 const HEADER_HEIGHT_LARGE = [200, 250]
 
-const HEADER_HEIGHT_MAP = {
-    small: HEADER_HEIGHT_SMALL,
-    normal: HEADER_HEIGHT_NORMAL,
-    large: HEADER_HEIGHT_LARGE,
-}
-
 // Footer 
-const FOOTER_HEIGHT_SMALL = [0, 80, 100]
-const FOOTER_HEIGHT_NORMAL = [0, 80, 100]
-const FOOTER_HEIGHT_LARGE = [0, 130, 200]
-
-
 const FOOTER_WIDTH_SMALL = [0, 50]
 const FOOTER_WIDTH_NORMAL = [1, 'calc(100% - 170px)', 'calc(100% - 310px)']
 const FOOTER_WIDTH_LARGE = [200, 250]
@@ -67,27 +55,21 @@ const MAIN_HEIGHT_HEADER_NORMAL_FOOTER_OFF = [1, 'calc(100% - 80px)', 'calc(100%
 let
 ASIDE_PREVIOUS,
 ASIDE_SIZE_PREVIOUS,
-FOOTER_PREVIOUS,
-FOOTER_WIDTH_PREVIOUS,
 MAIN_PREVIOUS,
 MAIN_WIDTH_PREVIOUS; 
 
 let
-ASIDE_STATUS,
-ASIDE_SIZE = 'normal',
 FOOTER_STATUS,
 FOOTER_SIZE = 'normal',
 HEADER_STATUS,
-HEADER_SIZE = 'normal',
-MAIN_STATUS = 'normal',
-MAIN_SIZE = 'normal';
+HEADER_SIZE = 'normal';
 
 const mainHeightCalculator = props => {
     if(HEADER_STATUS && FOOTER_STATUS) {
-        if(HEADER_SIZE == 'normal' && FOOTER_SIZE == 'normal') return MAIN_HEIGHT_HEADER_NORMAL_FOOTER_NORMAL
+        if(HEADER_SIZE === 'normal' && FOOTER_SIZE === 'normal') return MAIN_HEIGHT_HEADER_NORMAL_FOOTER_NORMAL
     }
     if(HEADER_STATUS && !FOOTER_STATUS) {
-        if(HEADER_SIZE == 'normal') return MAIN_HEIGHT_HEADER_NORMAL_FOOTER_OFF
+        if(HEADER_SIZE === 'normal') return MAIN_HEIGHT_HEADER_NORMAL_FOOTER_OFF
     }
 }
 
@@ -101,7 +83,6 @@ export default (state = initialState, { type, payload }) => {
             
         *---*/
         case THEME_LAYOUT_DASHBOARD_ASIDE_ON:
-            ASIDE_STATUS = true
             return {
                 ...state,
                 dashboard: {
@@ -140,7 +121,6 @@ export default (state = initialState, { type, payload }) => {
                 }
             }
         case THEME_LAYOUT_DASHBOARD_ASIDE_OFF:
-            ASIDE_STATUS = false
 
             // Globals
             ASIDE_PREVIOUS = state.dashboard.main.layout.ml
@@ -215,7 +195,6 @@ export default (state = initialState, { type, payload }) => {
                 }
             }
         case THEME_LAYOUT_DASHBOARD_ASIDE_SMALL:
-            ASIDE_SIZE = 'small'
             return {
                 ...state,
                 dashboard: {
@@ -254,7 +233,6 @@ export default (state = initialState, { type, payload }) => {
                 }
             }
         case THEME_LAYOUT_DASHBOARD_ASIDE_NORMAL:
-            ASIDE_SIZE = 'normal'
             return {
                 ...state,
                 dashboard: {
@@ -293,7 +271,6 @@ export default (state = initialState, { type, payload }) => {
                 }
             }
         case THEME_LAYOUT_DASHBOARD_ASIDE_LARGE:
-            ASIDE_SIZE = 'large'
             return {
                 ...state,
                 dashboard: {
@@ -371,7 +348,6 @@ export default (state = initialState, { type, payload }) => {
         case THEME_LAYOUT_DASHBOARD_FOOTER_OFF:
             FOOTER_STATUS = false
             // Global
-            FOOTER_PREVIOUS = state.dashboard.main.layout.ml
             MAIN_WIDTH_PREVIOUS = state.dashboard.main.layout.width
             return {
                 ...state,

@@ -1,17 +1,11 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react'
 /* ------------------------- Internal Dependencies -------------------------- */
-import { hacker } from 'assets/images'
-import { logoUport, enigmaBoxWhite } from 'assets/graphics'
 import { 
-  Flex, Box, Absolute,
-  BackgroundImage, BackgroundGradient,
-  Button, Container, Heading, Image, Link, Paragraph, Section, Span, SVG,
-  Blockquote, HorizontalRule, Shape, Responsive 
+  Flex, Box,
+  Button, Container, Heading, Image, Paragraph, Section
 } from 'atomic'
 
-import UportCredentialsRequest from 'assimilation/fetching/uport/UPortCredentialsRequest'
-import UserProfile from 'containers/user/UserProfile'
 import MacbookDisplay from 'components/sentient/MacbookDisplay'
 
 import hackathonDemo from './hackathon.gif'

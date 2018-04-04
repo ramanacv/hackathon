@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 /* ------------------------- Internal Dependencies -------------------------- */
 import { BackgroundImage } from 'atomic'
-import { Flex, Box } from 'particles'
 
 /* --------------------------- Styled VideoShowcases ---------------------------- */
 const Wrapper = styled.div`

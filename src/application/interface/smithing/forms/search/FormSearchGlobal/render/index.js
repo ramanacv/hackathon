@@ -4,10 +4,8 @@ import styled from 'styled-components'
 import { Field } from 'redux-form'
 /* ------------------------- Internal Dependencies -------------------------- */
 import assets from 'assets'
-import { Block } from 'particles'
-import { Flex, Box, Button, Heading, SVG, ReduxField } from 'atomic'
+import { Flex, SVG, ReduxField } from 'atomic'
 import { FormBase } from 'foundry'
-import StyleFormDefault from 'static/style/StyleFormDefault'
 
 const SearchUnderline = styled(Field)`
   border-bottom: 2px solid #1671af;

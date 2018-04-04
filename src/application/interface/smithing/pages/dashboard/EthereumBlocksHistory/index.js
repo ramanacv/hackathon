@@ -4,20 +4,12 @@ import React from 'react'
 
 /*---*--- Atoms ---*---*/
 import {
-  Flex, Box, 
-  Heading, Image, Paragraph, Link, Span, Container,
-  BackgroundImage, BackgroundGradient
+  Flex, Box
 } from 'atomic'
 
 /*---*--- Containers ---*---*/
-import {
-  EthersInfuraConnect,
-  EthersGanacheConnect,
-} from 'containers'
 
 import EthersBlockchainBlock from 'assimilation/fetching/ethers/EthersBlockchainBlock'
-import EthersWalletCreateRandom from 'assimilation/fetching/ethers/EthersWalletCreateRandom'
-import EthersWalletGenerateMnemonicCard from 'assimilation/fetching/ethers/EthersWalletGenerateMnemonicCard'
 
 /* ------------------------------- Component -------------------------------- */
 export default props =>

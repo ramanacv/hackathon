@@ -4,21 +4,14 @@ import { Field } from 'redux-form'
 
 /* ------------------------- Internal Dependencies -------------------------- */
 // files
-import { ethereum } from 'assets/shapes'
 // atoms
-import SVG from 'atoms/SVG'
 import StyleFieldDefault from 'static/style/StyleFieldDefault'
 import Box from 'atoms/Box'
-import Flex from 'atoms/Flex'
 import Button from 'atoms/Button'
-import Heading from 'atoms/Heading'
-import Paragraph from 'atoms/Paragraph'
-import Span from 'atoms/Span'
 import Form from 'molecules/Form'
 import ReduxField from 'organisms/ReduxField'
 import ens from 'logic/forms/normalize/ens'
 
-import EthersBlockchainBlockCard from 'assimilation/display/ethers/EthersBlockchainBlockCard'
 import EthersBlockchainBlockTransactions from 'assimilation/display/ethers/EthersBlockchainBlockTransactions'
 
 /* ---------------------------- Form Component ------------------------------ */

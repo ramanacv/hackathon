@@ -1,15 +1,9 @@
 /* ------------------------- External Dependencies -------------------------- */
 // import idx from './idx'
 import React from 'react';
-import HorizontalRule from 'atoms/HorizontalRule'
-import Absolute from 'atoms/Absolute'
-import Container from 'atoms/Container'
 import Box from 'atoms/Box'
 import Button from 'atoms/Button'
 import Heading from 'atoms/Heading'
-import Paragraph from 'atoms/Paragraph'
-import List from 'atoms/List'
-import Image from 'atoms/Image'
 /* ---------------------------- Module Package ------------------------------ */
 export default props => !props ? null :
 <Box 

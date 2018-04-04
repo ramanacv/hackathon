@@ -1,17 +1,14 @@
 /* ------------------------- External Dependencies -------------------------- */
-import React from 'react'
 import { connect } from 'react-redux';
 import { compose, lifecycle, withState } from 'recompose'
 import { reduxForm } from 'redux-form'
 /* ------------------------- Internal Dependencies -------------------------- */
 import { createValidator, required } from 'logic/forms/validation'
-import EthersContractInformation from 'assimilation/display/ethers/EthersContractInformation'
 import { fromEthers } from 'assimilation/symbiosis/selectors'
 import ethers from 'assimilation/symbiosis/ethers/actions'
 import Form from './form'
 
 // Depreacted Store Department Request Style | fix this @kamescg
-import { databaseWriteRequest } from 'store/departments/actions'
 /* ---------------------------- Module Package ------------------------------ */
 
 /*-* State Management *-*/
@@ -54,11 +51,11 @@ const QueryLifecycle = lifecycle(
     if(this.props.submitting === true) {
       this.props.reset()
       this.props.blockRunToggle(toggle=>!toggle)
-      if(this.props.transactionRun == false) this.props.transactionRunToggle(toggle=>!toggle)
+      if(this.props.transactionRun === false) this.props.transactionRunToggle(toggle=>!toggle)
     }
 
     // Update Multiple Blocks
-    if(this.props.blocksAllCalled != prevProps.blocksAllCalled ) {
+    if(this.props.blocksAllCalled !== prevProps.blocksAllCalled ) {
       if(this.props.transactionList[this.props.blocksAllCalled] ) this.props.transactionListAdd(n=>[...n,   ])
 
       this.props.blocksAllCalled.map(block=> {
@@ -79,7 +76,7 @@ const QueryLifecycle = lifecycle(
      * @desc Watch for new trasactions added to the list. If a new transaction is filtered,
      * we're going to send a "write" request to Firebase Realtime Database
      */
-    if (this.props.transactions != prevProps.transactions) {
+    if (this.props.transactions !== prevProps.transactions) {
 
     }
 
@@ -149,7 +146,7 @@ const mapDispatchToProps = (dispatch, props) => ({
 const onSubmit = (data, dispatch, props) => new Promise((resolve, reject) => {
   const blockEnd = data.ethBlockNumber - data.countBackwards
   if(!data.countBackwards) return null
-  for (var index = data.ethBlockNumber; index != blockEnd; index--) {
+  for (var index = data.ethBlockNumber; index !== blockEnd; index--) {
     dispatch(ethers.blockchainBlock('REQUEST')(
       Number(index),
       {

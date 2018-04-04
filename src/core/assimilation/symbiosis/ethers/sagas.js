@@ -1,25 +1,13 @@
 /* ------------------------- External Dependencies -------------------------- */
 import idx from './idx'
-import { sha3_512 } from 'js-sha3'
-import _ from 'lodash'
-import { call, put, fork, takeEvery, take } from 'redux-saga/effects';
+import { put, takeEvery } from 'redux-saga/effects';
 import actions from './actions'
 import ethers from 'ethers'
 import { EthersBlockFlowIn } from 'logic/interface/DataScaffold'
-import {
-  notificationOpen
-} from 'store/departments/actions'
 
 // Initialize
 const Wallet = ethers.Wallet;
-const Contract = ethers.Contract;
 const providers = ethers.providers;
-const utils = ethers.utils;
-
-const providerRouting = props => 
-props.global 
-? providers.getDefaultProvider() 
-: window.ethers.json;
 
 const networkRouting = network => {
   switch(idx(network, _=>_.provider)) {
@@ -39,12 +27,6 @@ const networkList = {
   'ropsten': providers.networks.ropsten,
   'rinkeby': providers.networks.rinkeby,
   'kovan': providers.networks.kovan,
-}
-
-// Exceptions
-function ProviderException(message) {
-  this.name = 'ProviderException';
-  this.message = message;
 }
 
 // TODO : Make a better global store.
@@ -78,7 +60,7 @@ export function * walletGenerateRandom ({payload, metadata}) {
 export function * walletGenerateJson ({payload, metadata}) {
   try {
     const { json, password } = payload
-    const encryptedWallet = yield Wallet.fromEncryptedWallet(json, password)
+    yield Wallet.fromEncryptedWallet(json, password)
     yield put(actions.walletGenerateJson("SUCCESS")(
       payload,
       metadata,
@@ -613,17 +595,6 @@ export function * transactionsBatchProcess({payload, metadata}) {
   }
 }
 
-async function transactionBatchProcessIndividual(payload, metadata) {
-  const { 
-    ethereumAddressList,
-    ethereumGasPrice,
-    ethereumGasLimit,
-    ethereumTokenAmount
-  } = payload
-  // return await window.ethereum.contracts.tokenContract.transfer('0x6C35dBB22ae3f8108a052A57B8547B20c5810181', 50, overrideOptions)
-
-}
-
 /**
  * Checks if the given string is an address
  *
@@ -646,27 +617,6 @@ var isAddress = function (address) {
         return true
     }
 };
-
-/**
- * Checks if the given string is a checksummed address
- *
- * @method isChecksumAddress
- * @param {String} address the given HEX adress
- * @return {Boolean}
-*/
-var isChecksumAddress = function (address) {
-    // Check each case
-    address = address.replace('0x','');
-    var addressHash = sha3_512(address.toLowerCase());
-    for (var i = 0; i < 40; i++ ) {
-        // the nth letter should be uppercase if the nth digit of casemap is 1
-        if ((parseInt(addressHash[i], 16) > 7 && address[i].toUpperCase() !== address[i]) || (parseInt(addressHash[i], 16) <= 7 && address[i].toLowerCase() !== address[i])) {
-            return false;
-        }
-    }
-    return true;
-};
-
 
 
 export default function* ethersSaga() {

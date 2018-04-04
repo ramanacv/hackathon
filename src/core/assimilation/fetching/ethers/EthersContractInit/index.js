@@ -1,7 +1,6 @@
 /* ------------------------- External Dependencies -------------------------- */
-import React from 'react'
 import { connect } from 'react-redux';
-import { compose, lifecycle, withProps } from 'recompose'
+import { compose, lifecycle } from 'recompose'
 /* ------------------------- Internal Dependencies -------------------------- */
 import EthersContractInformation from 'assimilation/display/ethers/EthersContractInformation'
 import { fromEthers } from 'assimilation/symbiosis/selectors'

@@ -1,14 +1,13 @@
 /* ------------------------- External Dependencies -------------------------- */
 import { connect } from 'react-redux'
-import { compose, lifecycle, withProps, withState, renderComponent } from 'recompose'
-import { reduxForm, reset } from 'redux-form'
+import { compose, lifecycle, withProps } from 'recompose'
+import { reduxForm } from 'redux-form'
 /* ------------------------- Internal Dependencies -------------------------- */
 /*--- Form Validation ---*/
-import { createValidator, required } from 'logic/forms/validation'
 
 import Render from './render';
 /* ------------------------ Initialize Dependencies ------------------------- */
-import { firestoreDocumentFilterGetRequest, dialogOpen } from 'store/departments/actions'
+import { firestoreDocumentFilterGetRequest } from 'store/departments/actions'
 
 /* ---------------------------- Module Package ------------------------------ */
 /*---*--- Recompose ---*---*/

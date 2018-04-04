@@ -9,7 +9,6 @@ import {
   DATABASE_CREATE_REQUEST,
   DATABASE_UPDATE_REQUEST,
   DATABASE_PATCH_REQUEST,
-  DATABASE_DELETE_REQUEST,
   DATABASE_CHANNEL_REQUEST,
   DATABASE_SYNC_REQUEST,
 } from './actions'
@@ -24,8 +23,6 @@ import {
   databaseUpdateFailure,
   databasePatchSuccess,
   databasePatchFailure,
-  databaseDeleteSuccess,
-  databaseDeleteFailure,
   databaseChannelSuccess,
   databaseChannelFailure,
   databaseSyncSuccess,
@@ -102,17 +99,6 @@ function*  dbPatch({payload, metadata}) {
     yield put(databasePatchSuccess({payload: {}, metadata}))
   } catch(e) {
     yield put(databasePatchFailure({payload: e, metadata}))
-  }
-}
-
-
-/*---*--- Delete ---*---*/
-function*  dbDelete({payload, metadata}) {
-  try {
-
-    yield put(databaseDeleteSuccess({payload: {}, metadata}))
-  } catch(e) {
-    yield put(databaseDeleteFailure({payload: e, metadata}))
   }
 }
 

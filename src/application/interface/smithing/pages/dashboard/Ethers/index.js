@@ -5,13 +5,11 @@ import React from 'react'
 /*---*--- Atoms ---*---*/
 import {
   Flex, Box, 
-  Heading, Image, Paragraph, Link, Span, Container,
-  BackgroundImage, BackgroundGradient
+  Container
 } from 'atomic'
 
 /*---*--- Containers ---*---*/
 import {
-  EthersInfuraConnect,
   EthersGanacheConnect,
 } from 'containers'
 

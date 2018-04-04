@@ -1,12 +1,12 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react'
 /* ------------------------- Internal Dependencies -------------------------- */
-import { dataMining, commerceKiosk } from 'assets/shapes'
+import { commerceKiosk } from 'assets/shapes'
 /*---*--- Atoms ---*---*/
 import {
   Flex, Box, 
-  Heading, Image, Paragraph, Link, Span, Container, SVG,
-  BackgroundImage, BackgroundGradient, HorizontalRule
+  Heading, SVG,
+  HorizontalRule
 } from 'atomic'
 
 /*---*--- Assimilation ---*---*/

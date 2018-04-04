@@ -5,7 +5,6 @@ import { compose, lifecycle, defaultProps } from 'recompose'
 /* ------------------------- Internal Dependencies -------------------------- */
 // Store
 import { fromEthers } from 'assimilation/symbiosis/selectors'
-import { ethersBlockchainGetBlockRequest } from 'assimilation/symbiosis/actions'
 import ethers from 'assimilation/symbiosis/ethers/actions'
 
 // Display
@@ -32,14 +31,14 @@ const QueryLifecycle = lifecycle(
   },
   componentDidUpdate(prevProps)
   {
-    if (this.props.blockNumber != prevProps.blockNumber) {
+    if (this.props.blockNumber !== prevProps.blockNumber) {
       if(!this.props.blockNumber) return null 
       this.props.ethersBlockchainBlockRequest({
         blockNumber: this.props.blockNumber,
         provider: this.props.provider
       })
     }
-    if (this.props.provider != prevProps.provider) {
+    if (this.props.provider !== prevProps.provider) {
       if(!this.props.blockNumber) return null
       this.props.ethersBlockchainBlockRequest({
         blockNumber: this.props.blockNumber,

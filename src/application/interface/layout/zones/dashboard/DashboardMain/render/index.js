@@ -1,7 +1,7 @@
 /* ------------------------- External Dependencies -------------------------- */
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Absolute, Flex } from 'particles'
+import { Flex } from 'particles'
 
 /* ------------------------- Internal Dependencies -------------------------- */
 const DashboardMainStyled = styled(Flex)`

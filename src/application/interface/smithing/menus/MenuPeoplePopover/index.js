@@ -3,10 +3,9 @@ import React from 'react'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import {
  Flex, Box,
- BackgroundImage, BackgroundGradient,
- Button, Heading, Image, Link, Paragraph,
+ Button, Heading, Link, Paragraph,
 } from 'atomic'
-import {FirestoreList, PopoverPure } from 'containers'
+import { PopoverPure } from 'containers'
 import DialogOpen from 'containers/dialog/DialogOpen'
 import PopoverClose from 'containers/popover/PopoverClose'
 /* ------------------------------- Component -------------------------------- */

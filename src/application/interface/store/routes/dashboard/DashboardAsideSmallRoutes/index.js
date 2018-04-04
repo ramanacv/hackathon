@@ -1,6 +1,6 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react';
-import { Switch, Route } from 'react-router';
+import { Route } from 'react-router';
 /* ------------------------- External Dependencies -------------------------- */
 import { AsideSmall } from 'smithing/zones'
 

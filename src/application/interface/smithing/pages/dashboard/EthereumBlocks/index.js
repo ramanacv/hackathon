@@ -5,8 +5,8 @@ import { dataMining } from 'assets/shapes'
 /*---*--- Atoms ---*---*/
 import {
   Flex, Box, 
-  Heading, Image, Paragraph, Link, Span, Container, SVG,
-  BackgroundImage, BackgroundGradient, HorizontalRule
+  Heading, SVG,
+  HorizontalRule
 } from 'atomic'
 
 

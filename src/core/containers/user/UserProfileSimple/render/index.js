@@ -1,8 +1,7 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react'
-import styled from 'styled-components'
 /* ------------------------- Internal Dependencies -------------------------- */
-import { Flex, Box, Image, Button, Link, SVG, Span } from 'atomic'
+import { Flex, Box, Image, Button } from 'atomic'
 /* --------------------------- Styled Components ---------------------------- */
 import AuthorizationLogin from 'containers/authentication/AuthorizationLogin'
 /* ------------------------------- Component -------------------------------- */

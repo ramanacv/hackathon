@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { ifProp } from 'styled-tools'
-import { font, palette } from 'styled-theme'
+import { palette } from 'styled-theme'
 import { color, boxShadow, fontSize, space, width, height, minHeight, borderRadius } from 'quarks'
 
 

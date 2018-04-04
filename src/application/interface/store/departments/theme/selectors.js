@@ -1,12 +1,7 @@
 const
 ASIDE_WIDTH_NORMAL = [0, 170, 310],
 HEADER_HEIGHT_NORMAL = [180, 80],
-FOOTER_HEIGHT_NORMAL = [0, 80, 100],
 MAIN_NORMAL = [1, 'calc(100% - 170px)', 'calc(100% - 80px)']
-
-const HEADER_SMALL = [0, 50]
-const HEADER_LARGE = [200, 250]
-
 
 export const initialState = {
 /*--* Dashboard *---*/

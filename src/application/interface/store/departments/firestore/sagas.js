@@ -1,11 +1,8 @@
 /* ------------------------- External Dependencies -------------------------- */
-import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
+import { call, put, takeEvery } from 'redux-saga/effects';
 
 /* ------------------------- Internal Dependencies -------------------------- */
 import reduxSagaFirebase from 'logic/services/Firebase';
-import {
-  notificationOpen
-} from 'store/departments/actions'
 
 import {
   FIRESTORE_DOCUMENT_ADD_REQUEST,
@@ -46,9 +43,7 @@ import {
 } from './actions'
 
 import {
-  firestoreDocumentFilterGetRequest,
-  firestoreDocumentDeleteRequest,
-  firestoreDocumentFieldsDeleteRequest,
+  firestoreDocumentFilterGetRequest
 } from 'store/departments/actions'
 
 import {
@@ -88,7 +83,7 @@ function* documentEmptyAdd({metadata}) {
 function* documentSet({payload, metadata}) {
   try {
     const { branch, merge } = metadata
-    const documentID = yield call(reduxSagaFirebase.firestore.documentSet, branch, payload, merge);
+    yield call(reduxSagaFirebase.firestore.documentSet, branch, payload, merge);
     yield put(firestoreDocumentSetSuccess({payload: {}, metadata}))
   } catch(e) {
     console.log(e)
@@ -100,7 +95,7 @@ function* documentSet({payload, metadata}) {
 function* documentUpdate({payload, metadata}) {
   try {
     const { branch } = metadata
-    const documentID = yield call(reduxSagaFirebase.firestore.documentUpdate, branch, payload);
+    yield call(reduxSagaFirebase.firestore.documentUpdate, branch, payload);
     yield put(firestoreDocumentUpdateSuccess({payload: {}, metadata}))
     yield put(firestoreDocumentGetRequest({payload:{}, metadata}))
   } catch(e) {
@@ -113,7 +108,7 @@ function* documentUpdate({payload, metadata}) {
 /*---*--- Document Get ---*---*/
 function* documentGet({payload, metadata}) {
   try {
-    const { branch, merge } = metadata
+    const { branch } = metadata
     const data = yield call(reduxSagaFirebase.firestore.documentGet, branch);
     yield put(firestoreDocumentGetSuccess({payload: data, metadata}))
   } catch(e) {
@@ -126,7 +121,7 @@ function* documentGet({payload, metadata}) {
 /*---*--- Document All Get ---*---*/
 function* documentAllGet({payload, metadata}) {
   try {
-    const { branch, merge } = metadata
+    const { branch } = metadata
     const data = yield call(reduxSagaFirebase.firestore.documentAllGet, branch);
     yield put(firestoreDocumentAllGetSuccess({payload: data, metadata}))
   } catch(e) {
@@ -150,9 +145,7 @@ function* documentFilterGet({payload, metadata}) {
 /*---*--- Document Compose Get ---*---*/
 function* documentComposeGet({payload, metadata}) {
   try {
-    const { branch, references } = metadata
-
-    const t = yield call(documentComposeGetAsync, metadata)
+    yield call(documentComposeGetAsync, metadata)
     yield put(firestoreDocumentComposeGetSuccess({metadata}))
   } catch(e) {
     yield put(firestoreDocumentComposeGetFailure({payload: e, metadata}))
@@ -204,7 +197,7 @@ function* documentDelete({payload, metadata}) {
 function* documentFieldsDelete({payload, metadata}) {
   try {
     const { branch } = metadata
-    const deleteFieldsRequest = yield call(reduxSagaFirebase.firestore.documentFieldsDelete, branch, payload);
+    yield call(reduxSagaFirebase.firestore.documentFieldsDelete, branch, payload);
     yield put(firestoreDocumentFieldsDeleteSuccess({payload: {}, metadata}))
   } catch(e) {
     yield put(firestoreDocumentFieldsDeleteFailure({payload: e, metadata}))

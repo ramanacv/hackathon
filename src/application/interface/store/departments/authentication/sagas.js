@@ -21,16 +21,13 @@ import {
   AUTH_LOGOUT_FAILURE,
   AUTH_LOGIN_WITH_PHONE_REQUEST,
   AUTH_LOGIN_WITH_PHONE_SUCCESS,
-  AUTH_LOGIN_WITH_PHONE_FAILURE,
   AUTH_LOGIN_WITH_AUTHORIZATION_REQUEST,
   AUTH_LOGIN_WITH_AUTHORIZATION_SUCCESS,
   AUTH_LOGIN_WITH_AUTHORIZATION_FAILURE,
   AUTH_LOGIN_WITH_EMAIL_PASSWORD_REQUEST,
   AUTH_LOGIN_WITH_EMAIL_PASSWORD_SUCCESS,
   AUTH_LOGIN_WITH_EMAIL_PASSWORD_FAILURE,
-  AUTH_REGISTER_WITH_EMAIL_PASSWORD_REQUEST,
-  AUTH_REGISTER_WITH_EMAIL_PASSWORD_SUCCESS,
-  AUTH_REGISTER_WITH_EMAIL_PASSWORD_FAILURE,
+  AUTH_REGISTER_WITH_EMAIL_PASSWORD_REQUEST
 } from './actions'
 
 import {
@@ -126,7 +123,7 @@ function* loginWithPhone({payload, metadata}) {
   const { phoneNumber } = payload
   try {
     const applicationVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-    const confirmationResult = yield call(reduxSagaFirebase.auth.signInWithPhoneNumber, phoneNumber, applicationVerifier);
+    yield call(reduxSagaFirebase.auth.signInWithPhoneNumber, phoneNumber, applicationVerifier);
     yield put({type: AUTH_LOGIN_WITH_PHONE_SUCCESS })
     yield put({type: AUTH_LOGIN_SUCCESS})
   } catch(e) {
@@ -137,7 +134,7 @@ function* loginWithPhone({payload, metadata}) {
 function* syncUserSaga() {
   const channel = yield call(reduxSagaFirebase.auth.channel);
   while(true) {
-    const { error, user } = yield take(channel);
+    const { user } = yield take(channel);
     if (user) {
       yield put(authSyncUser(user));
       yield put(firestoreDocumentFilterGetRequest({

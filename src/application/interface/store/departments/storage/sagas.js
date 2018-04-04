@@ -1,5 +1,5 @@
 /* ------------------------- External Dependencies -------------------------- */
-import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
+import { call, put, takeEvery } from 'redux-saga/effects';
 
 /* ------------------------- Internal Dependencies -------------------------- */
 import reduxSagaFirebase from 'logic/services/Firebase';
@@ -26,7 +26,7 @@ import {
 function* uploadFile({payload, metadata}) {
   try {
     const file = payload,
-    { location, fileMetadata } = metadata
+    { location } = metadata
     const fileID = yield call(reduxSagaFirebase.storage.uploadFile, `${location}/${file.name}`, file);
     yield put(storageUploadFileSuccess({payload: {fileID} , metadata}))
     yield put(notificationOpen({payload:{title: 'Storage Upload Success'}}))

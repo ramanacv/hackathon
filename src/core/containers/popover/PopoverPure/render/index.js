@@ -1,10 +1,7 @@
 /* ------------------------- External Dependencies -------------------------- */
 import React from 'react'
-import styled from 'styled-components'
 import Popover from 'react-popover'
 /* ------------------------- Internal Dependencies -------------------------- */
-import { Absolute, Flex, Box } from 'particles'
-import {Heading, Image, Paragraph, Container, Section} from 'atomic'
 /* --------------------------- Styled Components ---------------------------- */
 import Item from 'workshop/core/Item'
 /* ------------------------------- Component -------------------------------- */

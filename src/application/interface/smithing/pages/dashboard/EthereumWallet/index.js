@@ -4,9 +4,8 @@ import React from 'react'
 
 /*---*--- Atoms ---*---*/
 import {
-  Flex, Box, 
-  Heading, Image, Paragraph, Link, Span, Container,
-  BackgroundImage, BackgroundGradient
+  Box, 
+  Container
 } from 'atomic'
 
 /*---*--- Containers ---*---*/

@@ -1,4 +1,3 @@
-import { reducer } from 'redux-form'
 import { initialState } from './selectors'
 import { DRAWER_OPEN, DRAWER_CLOSE } from './actions'
 

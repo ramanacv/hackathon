@@ -1,5 +1,4 @@
 /* ------------------------- External Dependencies -------------------------- */
-import React from 'react';
 import { connect } from 'react-redux';
 import Render from './render';
 /* ---------------------------- Module Package ------------------------------ */

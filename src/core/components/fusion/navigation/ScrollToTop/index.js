@@ -1,6 +1,5 @@
 /* ------------------------- External Dependencies -------------------------- */
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { Component } from 'react'
 import { withRouter } from 'react-router'
 /* ------------------------- Internal Dependencies -------------------------- */
 

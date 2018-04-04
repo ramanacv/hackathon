@@ -3,8 +3,7 @@ import React from 'react'
 /* ------------------------- Internal Dependencies -------------------------- */
 /*-* Atoms *-*/
 import {
-  Flex, Box, 
-  Heading, Image, Paragraph, Container, Span
+  Flex, Box
 } from 'atomic'
 /*-* Containers *-*/
 import UPortCredentialsRequest from 'assimilation/fetching/uport/UPortCredentialsRequest'

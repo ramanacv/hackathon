@@ -3,7 +3,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { compose, lifecycle } from 'recompose'
 /* ---------------------------- Module Package ------------------------------ */
-import { databaseWriteRequest, databaseReadRequest } from 'store/departments/actions'
+import { databaseReadRequest } from 'store/departments/actions'
 
 /* ---------------------------- Module Package ------------------------------ */
 /* ---------------------------- Component Lifecycle ------------------------------ */

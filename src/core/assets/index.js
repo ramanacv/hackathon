@@ -3,7 +3,6 @@ import images from './images.js'
 import graphics from './graphics.js'
 import icons from './icons.js'
 import svg from './svg.js'
-import shapes from './shapes.js'
 import devices from './devices.js'
 
 const assets = {

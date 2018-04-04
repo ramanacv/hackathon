@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Absolute, Flex, Box } from 'particles'
-import {Heading, Image, Paragraph, Container, Section} from 'atomic'
-import { color, fontSize, space, width } from 'quarks'
+import { Box } from 'particles'
+import { Heading } from 'atomic'
+import { color, space, width } from 'quarks'
 
 import { Label, Input } from 'atomic'
 

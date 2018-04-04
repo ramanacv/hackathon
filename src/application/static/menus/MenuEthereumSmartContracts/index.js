@@ -1,4 +1,4 @@
-import { bookmark, dna, financialFolder, flowChartShapes, flowChartCircle, dataMining } from 'assets/shapes'
+import { dna, flowChartShapes, flowChartCircle, dataMining } from 'assets/shapes'
 export default [
   {
     title: 'Documentation',

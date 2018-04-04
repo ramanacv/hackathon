@@ -1,11 +1,9 @@
 /* ------------------------- External Dependencies -------------------------- */
 import _ from 'lodash'
 import React from 'react'
-import styled from 'styled-components'
 /* ------------------------- Internal Dependencies -------------------------- */
-import assets from 'assets'
 import { Flex, Box } from 'particles'
-import { BackgroundGradient, Container, Heading, Link, Paragraph, Section, SVG} from 'atomic'
+import { Heading, SVG} from 'atomic'
 import { DrawerLink } from 'fusion'
 import { PopoverPure } from 'containers'
 import { MenuRecursive as MenuAsideItemRecurse } from 'foundry'

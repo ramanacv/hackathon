@@ -8,7 +8,6 @@ import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
 
 /* ------------------------- Internal Dependencies -------------------------- */
-import { SpinnerSquares } from 'atomic'
 import { createValidator, required } from 'logic/forms/validation'
 
 /*--- Redux Store ---*/

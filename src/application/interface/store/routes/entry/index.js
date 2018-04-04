@@ -3,9 +3,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router';
 import { ToastContainer } from 'react-toastify';
 /* ------------------------- External Dependencies -------------------------- */
-import Box from 'atoms/Box'
 import Block from 'atoms/Block'
-import SpinnerSquares from 'atoms/SpinnerSquares'
 
 import DialogFactory from 'containers/dialog/DialogFactory'
 import DrawerFactory from 'containers/drawer/DrawerFactory'

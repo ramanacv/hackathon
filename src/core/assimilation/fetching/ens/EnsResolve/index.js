@@ -6,11 +6,9 @@ import {
 } from 'recompose'
 import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
-import filterKeys from 'filter-keys'
 
 /* ------------------------- Internal Dependencies -------------------------- */
 import Form from './form'
-import { SpinnerSquares } from 'atomic'
 import { createValidator, required } from 'logic/forms/validation'
 
 /*--- Redux Store ---*/
